@@ -6,7 +6,7 @@
 }
 
 body{
-    background: #222;
+    background: black;
 }
 
 .card{
@@ -76,6 +76,7 @@ body{
     justify-content: space-between;
     padding: 0 0;
     margin: 50px 0;
+    margin-left: 20px;
 }
 
 .col{

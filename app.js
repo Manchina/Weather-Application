@@ -12,6 +12,7 @@ async function checkWeather(city) {
     document.querySelector(".error").style.display = "block";
     document.querySelector(".weather").style.display = "none";
   } else {
+    document.querySelector(".error").style.display = "none";
     const data = await response.json();
     const locRes = await fetch(
       "http://api.openweathermap.org/geo/1.0/direct?q=" +
@@ -37,12 +38,14 @@ async function checkWeather(city) {
     };
 
     const dataIcon = data.weather[0].main;
+    console.log(dataIcon)
     const weatherIconImage = {
       Clouds: "images/clouds.png",
       Clear: "images/clear.png",
       Rain: "images/rain.png",
       Drizzle: "images/drizzle.png",
       Mist: "images/mist.png",
+      Thunderstorm: "images/rain.png"
     };
     weatherIcon.src = weatherIconImage[dataIcon];
 
